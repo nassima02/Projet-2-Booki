@@ -53,6 +53,45 @@ body {
     color: var(--main-bg-color)
 }
 
+/**************header******************/
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    width: 161px;
+    height: 79px;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo img {
+    width: 61px;
+    height: 19px;
+    padding: 30px 50px 30px 50px;
+}
+
+.nav-bar {
+    display: flex;
+    width: 244px;
+    height: 35px;
+    gap: 68px;
+}
+
+.nav-bar .nav-links {
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 19px;
+    border-top: solid 2px white;
+}
+
+.nav-bar .nav-links:hover {
+    color: var(--main-color);
+    border-top: solid 2px var(--main-color);
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -64,6 +103,7 @@ body {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 /****** Hebergements ***********/
@@ -116,9 +156,6 @@ body {
     margin-bottom: 5px;
 }
 
-
-
-
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -158,5 +195,49 @@ body {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    body {
+        margin: 0;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
+    .header-container {
+        /*justify-content: center;*/
+        flex-direction: column;
+
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo img {
+        padding: 30px;
+    }
+
+    .nav-bar {
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-bar .nav-links {
+        padding-bottom: 19px;
+        border-bottom: solid 2px var(--filter-bg-color);
+        padding-top: 0;
+        border-top: 0;
+        width: 50%;
+        text-align: center;
+    }
+
+    .nav-bar .nav-links:hover {
+        color: var(--main-color);
+        border-bottom: solid 2px var(--main-bg-color);
+        border-top: 0;
+    }
+
+
     /* ... */
 }
