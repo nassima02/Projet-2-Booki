@@ -19,7 +19,6 @@ body {
 }
 
 .main-container {
-    width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
@@ -28,6 +27,10 @@ body {
 .section-title {
     margin: 0;
     font-size: 22px;
+}
+
+.card-title {
+    font-size: 16px;
 }
 
 .card {
@@ -41,16 +44,22 @@ body {
     object-fit: cover;
 }
 
-.card-title {
-    font-size: 16px;
-}
-
 .euro {
     font-weight: 700;
 }
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-subtitle {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /**************header******************/
@@ -61,22 +70,17 @@ body {
 
 .logo {
     display: flex;
-    width: 161px;
-    height: 79px;
     gap: 10px;
-    align-items: center;
 }
 
 .logo img {
-    width: 61px;
     height: 19px;
-    padding: 30px 50px 30px 50px;
+    padding: 30px;
 }
 
 .nav-bar {
     display: flex;
-    width: 244px;
-    height: 35px;
+    height: auto;
     gap: 68px;
 }
 
@@ -156,6 +160,28 @@ body {
     margin-bottom: 5px;
 }
 
+/******************footer***************/
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 35px 0 0 0;
+    gap: 30px;
+    background-color: var(--main-bg-color);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    padding: 20px 0 0 20px;
+    gap: 15px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+}
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -167,6 +193,7 @@ body {
 
     .hebergements {
         width: 100%;
+        margin-top: 50px;
     }
 
     .populaires {
@@ -204,9 +231,7 @@ body {
     }
 
     .header-container {
-        /*justify-content: center;*/
         flex-direction: column;
-
     }
 
     .logo {
@@ -214,18 +239,13 @@ body {
         justify-content: center;
     }
 
-    .logo img {
-        padding: 30px;
-    }
-
     .nav-bar {
-        width: 100%;
         gap: 0;
     }
 
     .nav-bar .nav-links {
         padding-bottom: 19px;
-        border-bottom: solid 2px var(--filter-bg-color);
+        border-bottom: solid 2px var(--main-bg-color);
         padding-top: 0;
         border-top: 0;
         width: 50%;
@@ -234,10 +254,20 @@ body {
 
     .nav-bar .nav-links:hover {
         color: var(--main-color);
-        border-bottom: solid 2px var(--main-bg-color);
+        border-bottom: solid 2px var(--main-color);
         border-top: 0;
     }
 
+    /******footer**************/
+    .footer-container {
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px 81px 30px 30px;
+    }
+
+    .footer-nav {
+        padding: 0;
+    }
 
     /* ... */
 }
