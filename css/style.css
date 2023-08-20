@@ -89,7 +89,7 @@ body {
 
 .nav-bar .nav-links:hover {
     color: var(--main-color);
-    border-top: solid 2px #0065FC;
+    border-top: solid 2px var(--main-color);
 }
 
 /****** Hebergements And Populaires ***********/
@@ -225,7 +225,7 @@ body {
 
     .nav-bar .nav-links {
         padding-bottom: 19px;
-        border-bottom: solid 2px white;
+        border-bottom: solid 2px var(--filter-bg-color);
         padding-top: 0;
         border-top: 0;
         width: 50%;
@@ -234,7 +234,7 @@ body {
 
     .nav-bar .nav-links:hover {
         color: var(--main-color);
-        border-bottom: solid 2px #0065FC;
+        border-bottom: solid 2px var(--main-bg-color);
         border-top: 0;
     }
 
