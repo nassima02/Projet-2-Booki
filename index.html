@@ -16,27 +16,74 @@
 </head>
 
 <body>
-
-
-<div class="main-container">
-    <!-------------------------------header------------------------------>
+<div class="body-container">
+    <!---------------header--------------->
     <header class="header-container">
         <div class="logo"><img src="./images/logo/Booki.png" alt="logo booki"></div>
         <nav class="nav-bar">
-            <a class="nav-links" href="#monAncre">Hébergements</a>
-            <a class="nav-links" href="#">Activités</a>
+            <a class="nav-links" href="#ancre-hebergements">Hébergements</a>
+            <a class="nav-links" href="#ancre-activites">Activités</a>
         </nav>
     </header>
-    <!------------------------------main--------------------------------->
-    <main>
-        <div class="hebergements-and-populaires">
-            <section class="hebergements">
+    <!------------------main----------------->
+    <main class="main-container">
+
+        <!---------------search bar container--------------------->
+        <section class="search-bar-container">
+            <div class="title">
+                <h1 class="section-title">Trouver votre hébergement pour des vacances de rêve </h1>
+                <h3 class="section-subtitle">En plein centre-ville ou en pleine nature</h3>
+            </div>
+
+            <form class="search">
+                <label for="name" class="search-label"><i class="fa-solid fa-location-dot fa-solid-black"></i></label>
+                <input type="text" id="name" name="input-fields" class="filter-title search-input"/>
+                <button type="button" class="search-button">Recherche</button>
+                <button type="button" class="search-button-glass">
+                    <i class="fa-solid fa-magnifying-glass  fa-solid-white"></i>
+                </button>
+            </form>
+
+            <div class="filter">
+                <div class="filter-title">Filtres</div>
+                <div class="select">
+                    <i class="fa-solid fa-money-bill-wave fa-lg"></i>
+                    <div>Economique</div>
+                </div>
+                <div class="select">
+                    <i class="fa-solid fa-person fa-lg"></i>
+                    <div>Familiale</div>
+                </div>
+                <div class="select">
+                    <i class="fa-solid fa-heart fa-lg"></i>
+                    <div>Romantique</div>
+                </div>
+                <div class="select">
+                    <i class="fa-solid fa-fire fa-lg"></i>
+                    <div>Nos pépites</div>
+                </div>
+            </div>
+
+            <div class="infos">
+                <div class="icon-infos">
+                    <i class="fa-solid fa-info fa-xs"></i>
+                </div>
+                <h3 class="card-title">Plus de 500 logements sont disponibles dans cette ville</h3>
+            </div>
+        </section>
+
+        <!----------------hébergement and populaire------------------>
+        <div id="ancre-hebergement" class="hebergements-and-populaires">
+
+            <!--------------------section hebergement------------->
+            <section id="ancre-hebergements" class="hebergements">
             </section>
+
+            <!-------------------section populaire----------------->
             <section id="monAncre" class="populaires">
                 <div class="populaires-title">
                     <h2 class="section-title">Les plus populaires</h2>
                     <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                    <div></div>
                 </div>
                 <div class="populaires-cards">
                     <article class="card">
@@ -96,25 +143,32 @@
                 </div>
             </section>
         </div>
+        <!----------------------sections activites-------------------->
+        <section id="ancre-activites" class="activites">
+
+        </section>
     </main>
+
+    <!-------------------section footer------------------>
     <footer class="footer-container">
-        <nav class="footer-nav">
-            <h2 class="footer-title">A propos</h2>
-            <a class="footer-subtitle" href="">Fonctionnement du site</a>
-            <a class="footer-subtitle" href="">Conditions générales</a>
-            <a class="footer-subtitle" href="">Données et confidentialité</a>
-        </nav>
-        <nav class="footer-nav">
-            <h2 class="footer-title">Nos hébergements</h2>
-            <a class="footer-subtitle" href="">Charte qualité</a>
-            <a class="footer-subtitle" href="">Proposer votre hôtel</a>
-        </nav>
-        <nav class="footer-nav">
-            <h2 class="footer-title">Assitance</h2>
-            <a class="footer-subtitle" href="">Centre d'aide</a>
-            <a class="footer-subtitle" href="">Nous contacter</a>
-        </nav>
+        <section class="footer-section">
+            <h2 class="filter-title">A propos</h2>
+            <a class="card-title" href="#">Fonctionnement du site</a>
+            <a class="card-title" href="#">Conditions générales</a>
+            <a class="card-title" href="#">Données et confidentialité</a>
+        </section>
+        <section class="footer-section">
+            <h2 class="filter-title">Nos hébergements</h2>
+            <a class="card-title" href="#">Charte qualité</a>
+            <a class="card-title" href="#">Proposer votre hôtel</a>
+        </section>
+        <section class="footer-section">
+            <h2 class="filter-title">Assitance</h2>
+            <a class="card-title" href="#">Centre d'aide</a>
+            <a class="card-title" href="#">Nous contacter</a>
+        </section>
     </footer>
 </div>
 </body>
+
 </html>
