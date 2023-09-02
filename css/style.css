@@ -84,7 +84,7 @@ body {
     color: var(--main-bg-color)
 }
 
-/**************header******************/
+/************** Header ***************/
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@ body {
     border-top: solid 2px var(--main-color);
 }
 
-/************search-bar-container**********/
+/************ Search-bar-container **********/
 .search-bar-container {
     display: flex;
     flex-direction: column;
@@ -135,13 +135,12 @@ body {
     font-weight: 400;
 }
 
-/***************************************/
 .search {
     display: flex;
     height: 49px;
     align-items: center;
     border-radius: 15px;
-    max-width: 377px;
+    width: 377px;
 }
 
 .search-input {
@@ -152,6 +151,7 @@ body {
     border: 1px solid var(--main-bg-color);
     border-left: 0;
     border-right: 0;
+    width: 195px;
 }
 
 .search-input:focus {
@@ -184,7 +184,6 @@ body {
     display: none;
 }
 
-/*************************************/
 .filter {
     display: flex;
     align-items: center;
@@ -211,7 +210,6 @@ body {
     cursor: url(../images/cursor.png), pointer;
 }
 
-/**************************/
 .infos {
     display: flex;
     align-items: center;
@@ -252,7 +250,6 @@ body {
     width: 65%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 .hebergements-cards {
@@ -260,12 +257,13 @@ body {
     flex-wrap: wrap;
     gap: 30px 0;
     justify-content: space-between;
+    margin: 35px 0 35px 0;
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    width: calc(33% - 18px);
+    width: calc(33.3333% - 20px);
     box-sizing: border-box;
     gap: 10px;
 }
@@ -279,22 +277,17 @@ body {
 
 .hebergements-cards .card-content {
     width: 100%;
-    padding-left: 15px;
+    padding: 0 0 5px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
     gap: 8px;
-    margin-bottom: 10px;
 }
 
 .hebergements-cards .card-title {
     margin-bottom: 8px;
     margin-top: 10px;
-}
-
-.card-txt {
-    gap: 8px;
 }
 
 /****** Populaires ***********/
@@ -331,7 +324,7 @@ body {
 
 .populaires-cards .card-title {
     margin-top: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .populaires-cards .card-subtitle {
@@ -342,7 +335,7 @@ body {
     margin-bottom: 5px;
 }
 
-/******************activites*************/
+/************ Activites *************/
 .activites {
     display: flex;
     flex-direction: column;
@@ -389,7 +382,7 @@ body {
     color: black;
 }
 
-/******************footer***************/
+/************* Footer ***************/
 .footer-container {
     display: flex;
     gap: 15px;
@@ -421,7 +414,7 @@ body {
         padding: 0 50px;
     }
 
-    /************search bar**********/
+    /*********** Search bar **********/
     .filter-title {
         width: 100%;
     }
@@ -431,7 +424,7 @@ body {
         gap: 20px 15px;
     }
 
-    /***********Hebergements and populaires****************/
+    /********* Hebergements and populaires **********/
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 35px;
@@ -455,18 +448,12 @@ body {
         width: 30%;
     }
 
-    /*    .populaires-cards .card-title {*/
-    /*        font-size: 14px;*/
-    /*    }*/
-    /*    .populaires-cards .card-subtitle {*/
-    /*        font-size: 13px;*/
-    /*    }*/
-    /*searche bar*/
+    /******** Searche bar ********/
     .filter .select {
         font-size: 16px;
     }
 
-    /*!****activites***!*/
+    /******** Activites *******/
     .activites-cards .card img {
         height: 200px;
     }
@@ -480,7 +467,7 @@ body {
         gap: 35px;
     }
 
-    /******************header******************/
+    /************* Header ************/
     .header-container {
         flex-direction: column;
     }
@@ -509,7 +496,7 @@ body {
         border-top: 0;
     }
 
-    /*********************search bar***************/
+    /************** Search bar ***************/
     .search-bar-container {
         padding: 0 20px;
     }
@@ -556,7 +543,7 @@ body {
         box-sizing: border-box;
     }
 
-    /****************hebergementandpopulaire***************/
+    /********** Hebergements and populaires **********/
     .hebergements-and-populaires {
         flex-direction: column-reverse;
         gap: 15px;
@@ -566,33 +553,23 @@ body {
         border-radius: 0;
     }
 
-    /*              Hébergement           */
     .hebergements-and-populaires .hebergements {
         background-color: white;
     }
 
-    /*!****** Hebergements ***********!*/
+    /********* Hébergements **********/
     .hebergements {
         flex-direction: column;
         gap: 15px;
     }
 
     .hebergements-cards {
-        flex-direction: column;
         gap: 15px;
-        width: 100%
+        margin: 0;
     }
 
     .hebergements-cards .card {
         width: 100%;
-        box-sizing: border-box;
-        gap: 10px;
-        height: 207px;
-    }
-
-    .hebergements .card-title {
-        margin-top: 10px;
-        margin-bottom: 8px;
     }
 
     .hebergements .card:nth-child(1) {
@@ -621,40 +598,23 @@ body {
 
     .hebergements-cards img {
         width: 100%;
-        height: 124px;
-
     }
 
-    /*.hebergements-cards .card-content {*/
-    /*    width: 100%;*/
-    /*    padding-left: 15px;*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    justify-content: space-between;*/
-    /*    box-sizing: border-box;*/
-    /*    gap: 8px;*/
-    /*    margin-bottom: 10px;*/
-    /*}*/
-    /*.hebergements-cards .card-title {*/
-    /*    margin-bottom: 8px;*/
-    /*}*/
-    /*.card-txt {*/
-    /*    gap: 8px;*/
-    /*}*/
-    /*****Populaire*********/
+    /******* Populaire *********/
     .populaires-cards {
         flex-direction: column;
     }
 
     .populaires-cards .card {
         width: auto;
+        margin-top: 15px;
     }
 
     .populaires {
         border-radius: 0;
     }
 
-    /*****activités******/
+    /******* Activités ********/
     .activites-cards {
         flex-direction: column;
         gap: 15px;
@@ -669,7 +629,7 @@ body {
         height: 141px;
     }
 
-    /******footer**************/
+    /********* Footer **********/
     .footer-container {
         flex-direction: column;
         gap: 50px;
