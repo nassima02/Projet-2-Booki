@@ -1,8 +1,13 @@
-/****** General ***********/
+/** ***********************************************
+ *                  GENERAL
+ ********************************************** **/
+
+/* Définition la police de caractère par défaut pour tous les éléments */
 * {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Définition des variables CSS pour les couleurs principales */
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -11,14 +16,17 @@
     --shadow-color: #0000001A;
 }
 
+/* Style par défaut pour les icônes FontAwesome solides */
 .fa-solid {
     color: var(--main-color);
 }
 
+/* Style pour afficher en noir les icônes FontAwesome  */
 .fa-solid-black {
     color: black;
 }
 
+/* Style pour afficher en blanc les icônes FontAwesome  */
 .fa-solid-white {
     color: white;
 }
@@ -44,6 +52,9 @@ body {
     gap: 35px;
 }
 
+/** ***********************************************
+ *       LES CLASSES DE POLICE DE CARATÈRES
+ ********************************************** **/
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -65,6 +76,17 @@ body {
     font-weight: 400;
 }
 
+.euro {
+    font-weight: 700;
+}
+
+/** ***********************************************
+ *       CLASSES DE MISE EN FORME DES CARTES
+ ********************************************** **/
+.card-txt {
+    margin-bottom: 8px;
+}
+
 .card {
     background-color: white;
     border-radius: 20px;
@@ -76,15 +98,13 @@ body {
     object-fit: cover;
 }
 
-.euro {
-    font-weight: 700;
-}
-
 .neutral-star {
     color: var(--main-bg-color)
 }
 
-/************** Header ***************/
+/** ***********************************************
+ *                  HEADER
+ ********************************************** **/
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -117,14 +137,16 @@ body {
     border-top: solid 2px var(--main-color);
 }
 
-/************ Search-bar-container **********/
+/** ***********************************************
+ *               SEARCH-BAR-CONTAINER
+ ********************************************** **/
 .search-bar-container {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
-.title {
+.search-title {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -135,39 +157,39 @@ body {
     font-weight: 400;
 }
 
-.search {
+.search-form {
     display: flex;
-    height: 49px;
     align-items: center;
-    border-radius: 15px;
+    height: 49px;
     width: 377px;
-}
-
-.search-input {
-    flex-grow: 1;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 0 24px;
-    border: 1px solid var(--main-bg-color);
-    border-left: 0;
-    border-right: 0;
-    width: 195px;
-}
-
-.search-input:focus {
-    outline: none;
+    border-radius: 15px;
 }
 
 .search-label {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 50px;
+    min-width: 50px; /*pour éviter que la largeur diminue en version mobile*/
     height: 49px;
     border-radius: 15px 0 0 15px;
     background-color: var(--main-bg-color);
 }
 
+.search-input {
+    box-sizing: border-box;
+    padding: 0 24px;
+    border: 1px solid var(--main-bg-color);
+    border-left: 0; /*pour éviter d'avoir une double bordure à gauche*/
+    border-right: 0; /*pour éviter d'avoir une double bordure à droite*/
+    width: 100%;
+    height: 100%;
+}
+
+.search-input:focus {
+    outline: none; /*pour masquer la bordure du champ input quand on clique dedan*/
+}
+
+/** le bouton de recherche version desktop et tablette **/
 .search-button {
     width: 132px;
     height: 100%;
@@ -180,6 +202,7 @@ body {
     border: 1px solid var(--main-color);
 }
 
+/** cette class permet de masquer le bouton loupe en version desktop et tablette **/
 .search-button-glass {
     display: none;
 }
@@ -190,22 +213,19 @@ body {
     gap: 15px;
 }
 
-.filter .select {
-    font-size: 17px;
-    font-weight: 700;
-    padding: 15px;
-}
-
-.select {
+.filter-item {
     display: flex;
     align-items: center;
     border-radius: 25px;
     border: 2px solid var(--btn-bg-color);
+    font-size: 17px;
+    font-weight: 700;
     padding: 15px 19px;
     gap: 10px;
 }
 
-.select:hover {
+/** cette class permet de changer au survol la couleur des elements de la liste du filtre avec un curseur representer par une image **/
+.filter-item:hover {
     background-color: var(--filter-bg-color);
     cursor: url(../images/cursor.png), pointer;
 }
@@ -220,7 +240,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 24px;
+    min-width: 24px; /*sinon sa largeur diminue en version mobile*/
     height: 24px;
     border: 1px solid var(--btn-bg-color);
     border-radius: 15px;
@@ -230,7 +250,9 @@ body {
     font-weight: 400;
 }
 
-/****** Hebergements And Populaires ***********/
+/** ***********************************************
+ *           HEBERGEMENTS AND POPULAIRES
+ ********************************************** **/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -245,13 +267,15 @@ body {
     flex-wrap: wrap;
 }
 
-/****** Hebergements ***********/
+/** ***********************************************
+ *                SECTION HEBERGEMENTS
+ ********************************************** **/
 .hebergements {
     width: 65%;
     display: flex;
     flex-direction: column;
-    gap: 35px;
     justify-content: space-between;
+    gap: 35px;
 }
 
 .hebergements-cards {
@@ -264,9 +288,9 @@ body {
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    width: calc(33.3333% - 20px);
     box-sizing: border-box;
-    gap: 10px;
+    /* on à besoin de 60px d'espace au total entre les 3 card d'ou le -20px  */
+    width: calc(33.3333% - 20px);
 }
 
 .hebergements-cards img {
@@ -277,21 +301,19 @@ body {
 }
 
 .hebergements-cards .card-content {
-    width: 100%;
     padding: 0 0 5px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    gap: 8px;
 }
 
 .hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
 
-/****** Populaires ***********/
+/** ***********************************************
+ *                SECTION  POPULAIRES
+ ********************************************** **/
 .populaires {
     width: 32%;
 }
@@ -328,15 +350,13 @@ body {
     margin-bottom: 5px;
 }
 
-.populaires-cards .card-subtitle {
-    margin: 0;
-}
-
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
 
-/************ Activites *************/
+/** ***********************************************
+ *                SECTION  ACTIVITES
+ ********************************************** **/
 .activites {
     display: flex;
     flex-direction: column;
@@ -375,7 +395,11 @@ body {
 }
 
 .activites-cards .card-title {
-    margin: 20px 19px;
+    margin: 20px 20px 0 20px;
+}
+
+.activites-cards .card-txt {
+    margin-bottom: 20px;
 }
 
 .card a {
@@ -383,7 +407,9 @@ body {
     color: black;
 }
 
-/************* Footer ***************/
+/** ***********************************************
+ *                SECTION FOOTER
+ ********************************************** **/
 .footer-container {
     display: flex;
     gap: 15px;
@@ -404,18 +430,22 @@ body {
     font-weight: 400;
 }
 
+/** ********************************************************************************
+ * Le code ci-dessous correspond à la version responsive uniquement  Media queries
+ ******************************************************************************* **/
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/** ***********************************************
+ * Medium devices (tablets, less/equal than 1024px)
+ ********************************************** **/
 @media (max-width: 1024px) {
 
     .body-container {
         padding: 0 50px;
     }
 
-    /*********** Search bar **********/
+    /** ***********************************************
+    *                SEARCH BAR
+     ********************************************** **/
     .filter-title {
         width: 100%;
     }
@@ -425,7 +455,13 @@ body {
         gap: 20px 15px;
     }
 
-    /********* Hebergements and populaires **********/
+    .filter .filter-item {
+        font-size: 16px;
+    }
+
+    /** ***********************************************
+     *               HEBERGEMENTS AND POPULAIRES
+    ********************************************** **/
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 35px;
@@ -441,7 +477,6 @@ body {
 
     .populaires-cards {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
     }
 
@@ -449,18 +484,17 @@ body {
         width: 30%;
     }
 
-    /******** Searche bar ********/
-    .filter .select {
-        font-size: 16px;
-    }
-
-    /******** Activites *******/
+    /** ***********************************************
+     *                ACTIVITES
+    ********************************************** **/
     .activites-cards .card img {
         height: 200px;
     }
 }
 
-/* Small devices (phones, less than 768px) */
+/** ***********************************************
+ *     SMALL DEVICES (PHONES, LESS THAN 768PX)
+ ********************************************** **/
 @media (max-width: 767.98px) {
 
     .body-container {
@@ -468,7 +502,9 @@ body {
         gap: 35px;
     }
 
-    /************* Header ************/
+    /** ***********************************************
+    *              Header
+    ********************************************** **/
     .header-container {
         flex-direction: column;
     }
@@ -497,18 +533,21 @@ body {
         border-top: 0;
     }
 
-    /************** Search bar ***************/
+    /** ***********************************************
+     *               SEARCH BAR
+     ********************************************** **/
     .search-bar-container {
         padding: 0 20px;
     }
 
-    .search {
+    .search-form {
         width: 100%;
         border: 1px solid var(--main-bg-color);
         border-left: 0;
         border-right: 0;
     }
 
+    /* le bouton de recherche sera masquer dans la version mobile et c'est le bouton de recherche loup qui sera afficher a sa place*/
     .search-button {
         display: none;
     }
@@ -538,13 +577,16 @@ body {
         width: 100%;
     }
 
-    .filter .select {
+    .filter .filter-item {
         font-size: 14px;
+        /* on à besoin de 10px d'espace au total entre les  2 bouttons de filtre d'ou le -5px  */
         width: calc(50% - 5px);
         box-sizing: border-box;
     }
 
-    /********** Hebergements and populaires **********/
+    /** ***********************************************
+     *               HEBERGEMENTS AND POPULAIRES
+    *********************************************** **/
     .hebergements-and-populaires {
         flex-direction: column-reverse;
         gap: 15px;
@@ -559,11 +601,12 @@ body {
         background-color: white;
     }
 
-    /********* Hébergements **********/
+    /** ***********************************************
+    *                HÉBERGEMENTS
+    ********************************************** **/
     .hebergements {
         flex-direction: column;
         gap: 15px;
-        padding: 0;
     }
 
     .hebergements-cards {
@@ -575,6 +618,7 @@ body {
         width: 100%;
     }
 
+    /*ces class permet de changer l'ordre d'affichage dans la version mobile*/
     .hebergements .card:nth-child(1) {
         order: 1;
     }
@@ -603,7 +647,9 @@ body {
         width: 100%;
     }
 
-    /******* Populaire *********/
+    /** ***********************************************
+     *               POPULAIRE
+     ********************************************** **/
     .populaires-cards {
         flex-direction: column;
     }
@@ -617,7 +663,9 @@ body {
         border-radius: 0;
     }
 
-    /******* Activités ********/
+    /** ***********************************************
+    *               ACTIVITÉS
+    ********************************************** **/
     .activites-cards {
         flex-direction: column;
         gap: 15px;
@@ -632,7 +680,9 @@ body {
         height: 141px;
     }
 
-    /********* Footer **********/
+    /** ***********************************************
+    *                   FOOTER
+    ********************************************** **/
     .footer-container {
         flex-direction: column;
         gap: 50px;
@@ -642,5 +692,4 @@ body {
     .footer-section {
         width: 100%;
     }
-
 }

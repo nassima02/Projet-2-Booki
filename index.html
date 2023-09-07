@@ -32,12 +32,13 @@
 
         <!-- ************ Search-bar-container ************* -->
         <section class="search-bar-container">
-            <div class="title">
+            <div class="search-title">
                 <h1 class="section-title">Trouver votre hébergement pour des vacances de rêve </h1>
                 <h3 class="section-subtitle">En plein centre-ville ou en pleine nature</h3>
             </div>
 
-            <form class="search">
+            <!-- *********** Form search ***************** -->
+            <form class="search-form">
                 <label for="name" class="search-label"><i class="fa-solid fa-location-dot fa-solid-black"></i></label>
                 <input type="text" id="name" name="input-fields" value="Marseille, France"
                        class="filter-title search-input">
@@ -46,22 +47,22 @@
                     <i class="fa-solid fa-magnifying-glass fa-lg   fa-solid-white"></i>
                 </button>
             </form>
-
+            <!-- *************** Filter search *************** -->
             <div class="filter">
                 <div class="filter-title">Filtres</div>
-                <div class="select">
+                <div class="filter-item">
                     <i class="fa-solid fa-money-bill-wave fa-lg"></i>
                     <div>Economique</div>
                 </div>
-                <div class="select">
+                <div class="filter-item">
                     <i class="fa-solid fa-person fa-lg"></i>
                     <div>Familiale</div>
                 </div>
-                <div class="select">
+                <div class="filter-item">
                     <i class="fa-solid fa-heart fa-lg"></i>
                     <div>Romantique</div>
                 </div>
-                <div class="select">
+                <div class="filter-item">
                     <i class="fa-solid fa-fire fa-lg"></i>
                     <div>Nos pépites</div>
                 </div>
@@ -79,7 +80,7 @@
         <div id="ancre-hebergement" class="hebergements-and-populaires">
 
             <!-- ********* Section hebergements ************ -->
-            <section id="ancre-hebergements" class="hebergements">
+            <section class="hebergements" id="ancre-hebergements">
                 <div class="hebergements-title">
                     <h2 class="section-title">Hébergements à Marseille</h2>
                 </div>
@@ -217,7 +218,7 @@
             </section>
 
             <!-- *************** Section populaires ************* -->
-            <section id="monAncre" class="populaires">
+            <section class="populaires">
                 <div class="populaires-title">
                     <h2 class="section-title">Les plus populaires</h2>
                     <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
@@ -284,7 +285,7 @@
         </div>
 
         <!-- **************** Section activites ************ -->
-        <section id="ancre-activites" class="activites">
+        <section class="activites" id="ancre-activites">
             <div class="activites-title">
                 <h2 class="section-title">Activités à Marseille</h2>
             </div>
@@ -340,7 +341,7 @@
         </section>
     </main>
 
-    <!-- ************ Section footer **************** -->
+    <!-- ************  Footer **************** -->
     <footer class="footer-container">
         <section class="footer-section">
             <h2 class="filter-title">A propos</h2>
