@@ -311,6 +311,12 @@ body {
     margin-bottom: 10px;
 }
 
+.hebergements-cards .card:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /** ***********************************************
  *                SECTION  POPULAIRES
  ********************************************** **/
@@ -327,6 +333,7 @@ body {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+
 }
 
 .populaires-cards img {
@@ -352,6 +359,13 @@ body {
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
+}
+
+
+.populaires-cards .card:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /** ***********************************************
@@ -405,6 +419,12 @@ body {
 .card a {
     text-decoration: none;
     color: black;
+}
+
+.activites-cards .card:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05); /* Agrandit légèrement la carte lors du survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /** ***********************************************
