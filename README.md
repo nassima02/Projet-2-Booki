@@ -13,4 +13,6 @@ Créer un prototype de site en intégrant la maquette conçue par le designer UI
 
 ## Langages utilisés :
 HTML5 / CSS3
-- Visiter le site web :https://nassima02.github.io/Projet-2-Booki/
+- Visiter le site web : [ici]([https://projetoc.alwaysdata.net/](https://nassima02.github.io/Projet-2-Booki/))
+
+
